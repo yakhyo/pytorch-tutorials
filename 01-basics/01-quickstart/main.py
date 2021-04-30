@@ -168,7 +168,7 @@ classes = [
 ]
 
 # =============================== #
-#         Loading Models          #
+#    Using Pre-Trained Models     #
 # =============================== #
 
 model.eval()
