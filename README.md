@@ -1,1 +1,1 @@
-# PyTorch-Tutorials
+![logo](logo/pytorch_logo_2018.svg)
