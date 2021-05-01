@@ -13,4 +13,6 @@
     
 2. [Intermediate](tutorials/02-intermediate)
     1. [Convolutional Neural Network](tutorials/02-intermediate/01-convolutional-nn/main.py)
+    2. [Residual Neural Network](tutorials/02-intermediate/02-deep-residual-nn/main.py)
+   
     
