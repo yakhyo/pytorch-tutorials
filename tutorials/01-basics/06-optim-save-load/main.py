@@ -10,6 +10,9 @@ from torch.utils.data import DataLoader
 from torchvision import datasets
 from torchvision.transforms import ToTensor, Lambda
 
+import torch.onnx as onnx
+import torchvision.models as models
+
 training_data = datasets.FashionMNIST(
     root="data",
     train=True,
@@ -107,3 +110,43 @@ for t in range(epochs):
     train_loop(train_dataloader, model, loss_fn, optimizer)
     test_loop(test_dataloader, model, loss_fn)
 print("Done!")
+
+# =============================== #
+#     Save and Load the Model     #
+# =============================== #
+
+model = models.vgg16(pretrained=True)
+torch.save(model.state_dict(), 'model_weights.pth')  # save the model
+
+''' To load model weights, you need to create an instance 
+of the same model first, and then load the parameters using 
+load_state_dict() method. '''
+
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+model = models.vgg16()  # load the model structure not weights
+# To laod the model to cpu or gpu: map_location=device
+model.load_state_dict(torch.load('model_weights.pth', map_location=device))
+model.eval()
+
+''' Be sure to call model.eval() method before inferencing to set the dropout 
+and batch normalization layers to evaluation mode. Failing to do this will 
+yield inconsistent inference results.
+'''
+
+# =============================== #
+#  Deep Save and Load the Models  #
+# =============================== #
+
+# save
+torch.save(model, 'model.pth')
+
+# load
+model = torch.load('model.pth')
+
+# =============================== #
+#      Export Model to ONNX       #
+# =============================== #
+
+input_image = torch.zeros((1, 3, 224, 224))
+onnx.export(model, input_image, 'model.onnx')
