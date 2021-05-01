@@ -18,6 +18,8 @@ transform = transforms.Compose([
 ])
 
 batch_size = 4
+epochs = 5
+
 train_data = torchvision.datasets.CIFAR10(
     root='data',
     train=True,
@@ -116,10 +118,10 @@ optimizer = optim.SGD(params=net.parameters(), lr=0.001, momentum=0.9)
 #              Train the network            #
 # ========================================= #
 
-for epoch in range(2):  # loop over the dataset multiple times
+for epoch in range(epochs):
 
     running_loss = 0.0
-    for i, data in enumerate(train_loader, 0):
+    for i, data in enumerate(train_loader):
         # get the inputs; data is a list of [inputs, labels]
         inputs, labels = data
 
