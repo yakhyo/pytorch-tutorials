@@ -1,4 +1,4 @@
-![logo](logo/pytorch_logo_2018.svg)
+![logo](logo/pytorch_logo.svg)
 
 ## Contents
 
