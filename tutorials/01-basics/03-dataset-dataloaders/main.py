@@ -8,9 +8,9 @@ import os
 import pandas as pd
 from torchvision.io import read_image
 
-# =============================== #
-#       Loading a Dataset         #
-# =============================== #
+# ========================================= #
+#             Loading a Dataset             #
+# ========================================= #
 
 train_data = datasets.FashionMNIST(
     root='data',
@@ -26,9 +26,9 @@ test_data = datasets.FashionMNIST(
     transform=ToTensor()
 )
 
-# =============================== #
-#      Visualize the Dataset      #
-# =============================== #
+# ========================================= #
+#            Visualize the Dataset          #
+# ========================================= #
 
 labels_map = {
     0: "T-Shirt",
@@ -53,9 +53,9 @@ for i in range(1, cols * rows + 1):
     plt.imshow(img.squeeze(), cmap='gray')
 plt.show()
 
-# =============================== #
-#          Custom Dataset         #
-# =============================== #
+# ========================================= #
+#               Custom Dataset              #
+# ========================================= #
 ''' A custom Dataset class must implement three functions: __init__, __len__, and __getitem__ '''
 
 
@@ -81,9 +81,9 @@ class CustomDataset(Dataset):
         return sample
 
 
-# =============================== #
-#           DataLoaders           #
-# =============================== #
+# ========================================= #
+#                  DataLoaders              #
+# ========================================= #
 train_loader = DataLoader(
     dataset=train_data,
     batch_size=64,
@@ -96,9 +96,9 @@ test_loader = DataLoader(
     shuffle=False
 )
 
-# =============================== #
-#   Iterate through DataLoaders   #
-# =============================== #
+# ========================================= #
+#          Iterate through DataLoaders      #
+# ========================================= #
 
 # Display image and label
 train_features, train_labels = next(iter(train_loader))

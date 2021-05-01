@@ -1,14 +1,13 @@
-# =============================== #
-#         Data Parallelism        #
-# =============================== #
-
+# ========================================= #
+#               Data Parallelism            #
+# ========================================= #
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 
-# =============================== #
-#    Parameters and DataLoaders   #
-# =============================== #
+# ========================================= #
+#           Parameters and DataLoaders      #
+# ========================================= #
 
 input_size = 5
 output_size = 2
@@ -56,9 +55,9 @@ class Model(nn.Module):
         return output
 
 
-# =============================== #
-#  Create Model and DataParallel  #
-# =============================== #
+# ========================================= #
+#       Create Model and DataParallel       #
+# ========================================= #
 
 model = Model(input_size, output_size)
 if torch.cuda.device_count() > 1:

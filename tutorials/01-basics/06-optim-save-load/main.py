@@ -134,9 +134,9 @@ and batch normalization layers to evaluation mode. Failing to do this will
 yield inconsistent inference results.
 '''
 
-# =============================== #
-#  Deep Save and Load the Models  #
-# =============================== #
+# ========================================= #
+#       Deep Save and Load the Models       #
+# ========================================= #
 
 # save
 torch.save(model, 'model.pth')
@@ -144,9 +144,9 @@ torch.save(model, 'model.pth')
 # load
 model = torch.load('model.pth')
 
-# =============================== #
-#      Export Model to ONNX       #
-# =============================== #
+# ========================================= #
+#            Export Model to ONNX           #
+# ========================================= #
 
 input_image = torch.zeros((1, 3, 224, 224))
 onnx.export(model, input_image, 'model.onnx')
