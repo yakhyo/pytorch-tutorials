@@ -3,7 +3,7 @@
 ## Contents
 
 1. [Basics](tutorials/01-basics)
-    1. [QuickStart]('tutorials/01-basics/01-quickstart/main.py') - 
+    1. [QuickStart](tutorials/01-basics/01-quickstart/main.py) - 
     2. [Tensors](tutorials/01-basics/02-tensors/main.py) -
     3. [Datasets and DataLoaders](tutorials/01-basics/03-dataset-dataloaders/main.py)
     4. [Transforms](tutorials/01-basics/04-transforms/main.py)
