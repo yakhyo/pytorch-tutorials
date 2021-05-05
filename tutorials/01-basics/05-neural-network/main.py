@@ -4,17 +4,17 @@ from torch import nn
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 
-# ========================================= #
-#           Get Device for Training         #
-# ========================================= #
+# ================================================================ #
+#                       Get Device for Training                    #
+# ================================================================ #
 
 device = ('cuda' if torch.cuda.is_available() else 'cpu')
 print(f'Using {device} device.')
 
 
-# ========================================= #
-#              Define the Class             #
-# ========================================= #
+# ================================================================ #
+#                            Define the Class                      #
+# ================================================================ #
 
 class NeuralNetwork(nn.Module):
     def __init__(self):
@@ -59,9 +59,9 @@ print(f"Predicted class: {y_pred}")
 
 ''' Predicted class: tensor([9], device='cuda:0') '''
 
-# ========================================= #
-#               Model Layers                #
-# ========================================= #
+# ================================================================ #
+#                            Model Layers                          #
+# ================================================================ #
 
 input_image = torch.rand(3, 28, 28)
 print(input_image.size())
@@ -131,9 +131,9 @@ logits = seq_modules(input_image)
 softmax = nn.Softmax(dim=1)
 pred_probab = softmax(logits)
 
-# ========================================= #
-#                Model Parameters           #
-# ========================================= #
+# ================================================================ #
+#                           Model Parameters                       #
+# ================================================================ #
 
 ''' Iterating over each parameter, and print its size and a preview of its values '''
 print("Model structure: ", model, "\n\n")

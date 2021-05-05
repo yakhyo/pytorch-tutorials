@@ -1,6 +1,6 @@
-# ========================================= #
-#               Import Libraries            #
-# ========================================= #
+# ================================================================ #
+#                           Import Libraries                       #
+# ================================================================ #
 
 import torch
 from torch import nn
@@ -13,9 +13,9 @@ import matplotlib.pyplot as plt
 batch_size = 64
 epochs = 5
 
-# ========================================= #
-#                   Load Data               #
-# ========================================= #
+# ================================================================ #
+#                             Load Data                            #
+# ================================================================ #
 
 train_data = datasets.FashionMNIST(
     root='data',
@@ -31,9 +31,9 @@ test_data = datasets.FashionMNIST(
     transform=ToTensor()
 )
 
-# ========================================= #
-#              Create Data Loaders          #
-# ========================================= #
+# ================================================================ #
+#                         Create Data Loaders                      #
+# ================================================================ #
 
 train_dataloader = DataLoader(
     dataset=train_data,
@@ -56,9 +56,9 @@ for X, y in test_dataloader:
             Shape of y:  torch.Size([64]) torch.int64
 """
 
-# ========================================= #
-#                Creating Models            #
-# ========================================= #
+# ================================================================ #
+#                           Creating Models                        #
+# ================================================================ #
 
 # Get CPU or GPU device for training
 device = ('cuda' if torch.cuda.is_available() else 'cpu')
@@ -88,17 +88,17 @@ class NeuralNetwork(nn.Module):
 model = NeuralNetwork().to(device)
 print(model)
 
-# ========================================= #
-#       Optimizing the Model Parameters     #
-# ========================================= #
+# ================================================================ #
+#                   Optimizing the Model Parameters                #
+# ================================================================ #
 
 loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
 print(optimizer)
 
-# ========================================= #
-#               Train the Model             #
-# ========================================= #
+# ================================================================ #
+#                           Train the Model                        #
+# ================================================================ #
 
 size = len(train_dataloader.dataset)
 for epoch in range(epochs):
@@ -119,9 +119,9 @@ for epoch in range(epochs):
             loss, current = loss.item(), i * len(images)
             print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
 
-# ========================================= #
-#                Test the Model             #
-# ========================================= #
+# ================================================================ #
+#                           Test the Model                         #
+# ================================================================ #
 
 size = len(test_dataloader.dataset)
 model.eval()
@@ -140,16 +140,16 @@ with torch.no_grad():
     correct = correct / size
     print(f"Test Error: \n Accuracy: {(100 * correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")
 
-# ========================================= #
-#          Saving Models          #
-# ========================================= #
+# ================================================================ #
+#                           Saving Models                          #
+# ================================================================ #
 
 torch.save(model.state_dict(), "model.pt")
 print("Saved PyTorch Model State to model.pt")
 
-# ========================================= #
-#               Loading Models              #
-# ========================================= #
+# ================================================================ #
+#                           Loading Models                         #
+# ================================================================ #
 
 model = NeuralNetwork()
 model.load_state_dict(torch.load("model.pt"))
@@ -167,9 +167,9 @@ classes = [
     "Ankle boot",
 ]
 
-# ========================================= #
-#           Using Pre-Trained Models        #
-# ========================================= #
+# ================================================================ #
+#                       Using Pre-Trained Models                   #
+# ================================================================ #
 
 model.eval()
 x, y = test_data[0][0], test_data[0][1]

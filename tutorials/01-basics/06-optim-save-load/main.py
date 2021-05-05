@@ -1,6 +1,6 @@
-# ========================================= #
-#               Optimization                #
-# ========================================= #
+# ================================================================ #
+#                           Optimization                           #
+# ================================================================ #
 
 # Prerequisite Code
 
@@ -65,9 +65,9 @@ loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
 
 
-# ========================================= #
-#               Full Implementation         #
-# ========================================= #
+# ================================================================ #
+#                          Full Implementation                     #
+# ================================================================ #
 
 def train_loop(dataloader, model, loss_fn, optimizer):
     size = len(dataloader.dataset)
@@ -101,9 +101,9 @@ def test_loop(dataloader, model, loss_fn):
     print(f"Test Error: \n Accuracy: {(100 * correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")
 
 
-# ========================================= #
-#                   Training                #
-# ========================================= #
+# ================================================================ #
+#                               Training                           #
+# ================================================================ #
 
 for t in range(epochs):
     print(f"Epoch {t + 1}\n-------------------------------")
@@ -111,9 +111,9 @@ for t in range(epochs):
     test_loop(test_dataloader, model, loss_fn)
 print("Done!")
 
-# ========================================= #
-#             Save and Load the Model       #
-# ========================================= #
+# ================================================================ #
+#                       Save and Load the Model                    #
+# ================================================================ #
 
 model = models.vgg16(pretrained=True)
 torch.save(model.state_dict(), 'model_weights.pth')  # save the model
@@ -134,9 +134,9 @@ and batch normalization layers to evaluation mode. Failing to do this will
 yield inconsistent inference results.
 '''
 
-# ========================================= #
-#       Deep Save and Load the Models       #
-# ========================================= #
+# ================================================================ #
+#                   Deep Save and Load the Models                  #
+# ================================================================ #
 
 # save
 torch.save(model, 'model.pth')
@@ -144,9 +144,9 @@ torch.save(model, 'model.pth')
 # load
 model = torch.load('model.pth')
 
-# ========================================= #
-#            Export Model to ONNX           #
-# ========================================= #
+# ================================================================ #
+#                        Export Model to ONNX                      #
+# ================================================================ #
 
 input_image = torch.zeros((1, 3, 224, 224))
 onnx.export(model, input_image, 'model.onnx')

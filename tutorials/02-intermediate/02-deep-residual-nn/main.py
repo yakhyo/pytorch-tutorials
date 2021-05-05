@@ -4,9 +4,9 @@ import torchvision
 import torchvision.transforms as transforms
 from tqdm import tqdm
 
-# ========================================= #
-#         Load and normalize the data       #
-# ========================================= #
+# ================================================================ #
+#                   Load and normalize the data                    #
+# ================================================================ #
 
 transform = transforms.Compose([
     transforms.Pad(4),
@@ -14,9 +14,9 @@ transform = transforms.Compose([
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 ])
 
-# ========================================= #
-#        Hyper Parameters and Device        #
-# ========================================= #
+# ================================================================ #
+#                     Hyper Parameters and Device                  #
+# ================================================================ #
 
 batch_size = 32
 epochs = 5
@@ -152,16 +152,16 @@ class ResNet(nn.Module):
 
 net = ResNet(BasicBlock, [2, 2, 2, 2]).to(device)
 
-# ========================================= #
-#         Optimizer and Loss function       #
-# ========================================= #
+# ================================================================ #
+#                     Optimizer and Loss function                  #
+# ================================================================ #
 
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(net.parameters(), lr=learning_rate, momentum=momentum)
 
-# ========================================= #
-#          Train and Test the Model         #
-# ========================================= #
+# ================================================================ #
+#                      Train and Test the Model                    #
+# ================================================================ #
 for epoch in range(epochs):
     progress_bar = tqdm(train_loader, nrows=len(train_loader))
     for i, (images, labels) in enumerate(progress_bar):

@@ -1,6 +1,6 @@
-# ========================================= #
-#                 Transforms                #
-# ========================================= #
+# ================================================================ #
+#                            Transforms                            #
+# ================================================================ #
 
 """ Data does not always come in its final processed form that is required for training machine learning algorithms.
 We use transforms to perform some manipulation of the data and make it suitable for training. All TorchVision

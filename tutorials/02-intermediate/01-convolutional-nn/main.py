@@ -8,9 +8,9 @@ import torchvision.transforms as transforms
 import matplotlib.pyplot as plt
 import numpy as np
 
-# ========================================= #
-#         Load and normalize the data       #
-# ========================================= #
+# ================================================================ #
+#                      Load and normalize the data                 #
+# ================================================================ #
 
 transform = transforms.Compose([
     transforms.ToTensor(),
@@ -50,9 +50,9 @@ classes = ('plane', 'car', 'bird', 'cat',
            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
 
-# ========================================= #
-#         Visualize Training Images         #
-# ========================================= #
+# ================================================================ #
+#                      Visualize Training Images                   #
+# ================================================================ #
 
 def imshow(img):
     img = img / 2 + 0.5  # unnormalize
@@ -69,9 +69,9 @@ imshow(torchvision.utils.make_grid(images))
 print(' '.join('%5s' % classes[labels[j]] for j in range(batch_size)))
 
 
-# ========================================= #
-#    Define Convolutional Neural Network    #
-# ========================================= #
+# ================================================================ #
+#                 Define Convolutional Neural Network              #
+# ================================================================ #
 
 class Net(nn.Module):
     def __init__(self):
@@ -107,16 +107,16 @@ class Net(nn.Module):
 
 net = Net()
 
-# ========================================= #
-#   Define a Loss function and Optimizer    #
-# ========================================= #
+# ================================================================ #
+#               Define a Loss function and Optimizer               #
+# ================================================================ #
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(params=net.parameters(), lr=0.001, momentum=0.9)
 
-# ========================================= #
-#              Train the network            #
-# ========================================= #
+# ================================================================ #
+#                         Train the network                        #
+# ================================================================ #
 
 for epoch in range(epochs):
 
@@ -148,9 +148,9 @@ print('Finished Training')
 PATH = './cifar_net.pth'
 torch.save(net.state_dict(), PATH)
 
-# ========================================= #
-#               Test the network            #
-# ========================================= #
+# ================================================================ #
+#                           Test the network                       #
+# ================================================================ #
 
 # Show test images
 images, labels = next(iter(test_loader))
@@ -179,9 +179,9 @@ with torch.no_grad():
 
 print(f'Accuracy of the network on test data: {100 * correct / total}')
 
-# ========================================= #
-#            Class-based Accuracy           #
-# ========================================= #
+# ================================================================ #
+#                        Class-based Accuracy                      #
+# ================================================================ #
 
 # prepare to count predictions for each class
 correct_pred = {classname: 0 for classname in classes}
