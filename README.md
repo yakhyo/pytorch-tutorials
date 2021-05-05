@@ -1,5 +1,5 @@
 ![logo](logo/pytorch_logo.svg)
-<hr style="height:2px">
+<hr>
 
 ## Contents
 <hr>
