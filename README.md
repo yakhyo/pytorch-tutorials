@@ -1,18 +1,21 @@
 ![logo](logo/pytorch_logo.svg)
+<hr style="height:2px">
 
 ## Contents
+<hr>
 
-1. [Basics](tutorials/01-basics)
-    1. [QuickStart](tutorials/01-basics/01-quickstart/main.py) - 
-    2. [Tensors](tutorials/01-basics/02-tensors/main.py) -
-    3. [Datasets and DataLoaders](tutorials/01-basics/03-dataset-dataloaders/main.py)
-    4. [Transforms](tutorials/01-basics/04-transforms/main.py)
-    5. [Neural Network](tutorials/01-basics/05-neural-network/main.py)
-    6. [Optimizers, Model Save and Load](tutorials/01-basics/06-optim-save-load/main.py)
-    7. [Data Parallel](tutorials/01-basics/07-data-parallel/main.py)
-    
-2. [Intermediate](tutorials/02-intermediate)
-    1. [Convolutional Neural Network](tutorials/02-intermediate/01-convolutional-nn/main.py)
-    2. [Residual Neural Network](tutorials/02-intermediate/02-deep-residual-nn/main.py)
+1. **Basics**
+    - [QuickStart](tutorials/01-basics/01-quickstart/main.py)
+    - [Tensors](tutorials/01-basics/02-tensors/main.py)
+    - [Datasets and DataLoaders](tutorials/01-basics/03-dataset-dataloaders/main.py)
+    - [Transforms](tutorials/01-basics/04-transforms/main.py)
+    - [Neural Network](tutorials/01-basics/05-neural-network/main.py)
+    - [Optimizers, Model Save and Load](tutorials/01-basics/06-optim-save-load/main.py)
+    - [Data Parallel](tutorials/01-basics/07-data-parallel/main.py)
+   
+
+2. **Intermediate**
+    - [Convolutional Neural Network](tutorials/02-intermediate/01-convolutional-nn/main.py)
+    - [Residual Neural Network](tutorials/02-intermediate/02-deep-residual-nn/main.py)
    
     
