@@ -2,7 +2,6 @@
 <hr>
 
 ## Contents
-<hr>
 
 1. **Basics**
     - [QuickStart](tutorials/01-basics/01-quickstart/main.py)
