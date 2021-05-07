@@ -20,6 +20,10 @@
     - [Long-Short-Term-Memory](tutorials/02-intermediate/04-lstm-network/main.py)
    
 
+3. **Advanced**
+    - [Adversarial Generative Network](tutorials/03-advanced/01-adversarial-network/main.py)
+   
+
 
 <br>
 <br>
