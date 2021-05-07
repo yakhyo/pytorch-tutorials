@@ -99,6 +99,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
 #                           Train and Test                         #
 # ================================================================ #
 
+# Train the model
 iter = 0
 print('TRAINING STARTED.\n')
 for epoch in range(num_epochs):
@@ -118,6 +119,7 @@ for epoch in range(num_epochs):
             # Calculate Loss
             print(f'Epoch: {epoch + 1}/{num_epochs}\t Iteration: {iter}\t Loss: {loss.item():.2f}')
 
+# Test the model
 model.eval()
 print('\nCALCULATING ACCURACY...\n')
 with torch.no_grad():
