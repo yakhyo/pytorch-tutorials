@@ -18,5 +18,12 @@
     - [Residual Neural Network](tutorials/02-intermediate/02-deep-residual-nn/main.py)
     - [Recurrent Neural Network](tutorials/02-intermediate/03-recurrent-nn/main.py)
    
-   
-    
+
+
+<br>
+<br>
+
+**References**
+   - [https://github.com/pytorch/examples](https://github.com/pytorch/examples)
+   - [https://www.deeplearningwizard.com](https://www.deeplearningwizard.com/deep_learning/intro/)
+   - [https://github.com/yunjey/pytorch-tutorial](https://github.com/yunjey/pytorch-tutorial)
