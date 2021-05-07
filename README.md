@@ -17,6 +17,7 @@
     - [Convolutional Neural Network](tutorials/02-intermediate/01-convolutional-nn/main.py)
     - [Residual Neural Network](tutorials/02-intermediate/02-deep-residual-nn/main.py)
     - [Recurrent Neural Network](tutorials/02-intermediate/03-recurrent-nn/main.py)
+    - [Long-Short-Term-Memory](tutorials/02-intermediate/04-lstm-network/main.py)
    
 
 
