@@ -28,7 +28,7 @@
 <br>
 <br>
 
-**Under construction**
+_Not completed yet_
 
 **References**
    - [https://github.com/pytorch/examples](https://github.com/pytorch/examples)
