@@ -21,7 +21,7 @@
    
 
 3. **Advanced**
-    - [Adversarial Generative Network](tutorials/03-advanced/01-adversarial-network/main.py) - ⌛️
+    - [Adversarial Generative Network](https://github.com/yakhyo/DCGAN-pt) - ✅
     - [Fast Neural Style Transfer](https://github.com/yakhyo/Fast-Neural-Style-Transfer) - ✅
    
 
