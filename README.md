@@ -30,7 +30,7 @@
 <br>
 <br>
 
-_Not completed yet_
+_Updating..._
 
 **References**
    - [https://github.com/pytorch/examples](https://github.com/pytorch/examples)
