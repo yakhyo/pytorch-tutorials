@@ -18,7 +18,8 @@
     - [Convolutional Neural Network](tutorials/02-intermediate/01-convolutional-nn/main.py) - ✅
     - [Residual Neural Network](tutorials/02-intermediate/02-deep-residual-nn/main.py) - ✅
     - [Recurrent Neural Network](tutorials/02-intermediate/03-recurrent-nn/main.py) - ✅
-    - [Long-Short-Term-Memory](tutorials/02-intermediate/04-lstm-network/main.py) - ✅
+    - [Long Short Term Memory](tutorials/02-intermediate/04-lstm-network/main.py) - ✅
+    - [Variational Auto Encoder](tutorials/02-intermediate/05-var-auto-encode/main.py) - ✅
    
 
 3. **Advanced**
