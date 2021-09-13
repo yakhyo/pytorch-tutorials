@@ -27,7 +27,7 @@ device = torch.device("cuda" if args.cuda else "cpu")
 kwargs = {'num_workers': 1, 'pin_memory': True} if args.cuda else {}
 
 # ================================================================ #
-#                      Prepare  and Dataloader                     #
+#                  Prepare Dataset and Dataloader                  #
 # ================================================================ #
 
 train_loader = torch.utils.data.DataLoader(
