@@ -61,6 +61,12 @@ epochs = 5
 # nn.CrossEntropyLoss combines nn.LogSoftmax and nn.NLLLoss.
 loss_fn = nn.CrossEntropyLoss()
 
+
+# ================================================================ #
+#                             Optimizer                            #
+# ================================================================ #
+
+
 # Optimizer
 optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
 
