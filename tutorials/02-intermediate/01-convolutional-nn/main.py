@@ -202,5 +202,4 @@ with torch.no_grad():
 # print accuracy for each class
 for classname, correct_count in correct_pred.items():
     accuracy = 100 * float(correct_count) / total_pred[classname]
-    print("Accuracy for class {:5s} is: {:.1f} %".format(classname,
-                                                         accuracy))
+    print("Accuracy for class {:5s} is: {:.1f} %".format(classname, accuracy))
