@@ -57,7 +57,7 @@ net.eval()  # Changing to eval mode to save it onnx format
 # The model expects the Y component of the YCbCr of an image as an input so it has one channel
 x = torch.randn(1, 1, 224, 224, requires_grad=True)
 onnx_model = net(x)
-"""
+
 # Export the onnx model
 torch.onnx.export(onnx_model,                                # model being run
                   x,                                         # model input (or a tuple for multiple inputs)
@@ -69,7 +69,7 @@ torch.onnx.export(onnx_model,                                # model being run
                   output_names=['output'],                   # the model's output names
                   dynamic_axes={'input': {0: 'batch_size'},  # variable length axes
                                 'output': {0: 'batch_size'}})
-"""
+
 # ================================================================ #
 #                         Loading ONNX model                       #
 # ================================================================ #
