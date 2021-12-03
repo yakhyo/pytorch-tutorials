@@ -16,24 +16,24 @@
 
 - [Autograd and Freeze weights](tutorials/02-beginner/01-autograd/main.py) - Autograd: **Automatic Differentiation**. 
 - [Neural Networks](tutorials/02-beginner/02-neural-networks/main.py) - To look deep into **Neural Networks**.
-- []()
 
 ### Intermediate
 
-- [Convolutional Neural Network](tutorials/03-intermediate/01-convolutional-nn/main.py) - Convolutional Neural Networks to classify images of CIFAR10 dataset.
-- [Residual Neural Network](tutorials/03-intermediate/02-deep-residual-nn/main.py) - Using Residual Blocks to build a Convolutional Neural Network. for image classification.
-- [Recurrent Neural Network](tutorials/03-intermediate/03-recurrent-nn/main.py) - Image classification using RNN networks.
-- [Long Short Term Memory](tutorials/03-intermediate/04-lstm-network/main.py) - MNIST digit classifier using LSTM.
-- [Variational Auto Encoder](tutorials/03-intermediate/05-var-auto-encode/main.py) - Reconstructing MNIST data samples using VAE.
+- [Convolutional Neural Network](tutorials/03-intermediate/01-convolutional-nn/main.py) - Classifying images of CIFAR10 using **CNNs**.
+- [Residual Neural Network](tutorials/03-intermediate/02-deep-residual-nn/main.py) - Using **Residual Blocks** to build a CNN for image classification.
+- [Recurrent Neural Network](tutorials/03-intermediate/03-recurrent-nn/main.py) - Image classification using **RNN** networks.
+- [Long Short Term Memory](tutorials/03-intermediate/04-lstm-network/main.py) - MNIST digit classifier using **LSTM**.
+- [Variational Auto Encoder](tutorials/03-intermediate/05-var-auto-encode/main.py) - Reconstructing MNIST data samples using **VAE**.
 
 ### Advanced
 
-- [Adversarial Generative Network](https://github.com/yakhyo/DCGAN-pt) - Deep Convolutional Generative Adversarial Network.
+- [Adversarial Generative Network](https://github.com/yakhyo/DCGAN-pt) - Deep Convolutional **Generative Adversarial Network**.
 - [Fast Neural Style Transfer](https://github.com/yakhyo/Fast-Neural-Style-Transfer) - ...
 - [Super Resolution. Running it Using ONNX Runtime](tutorials/04-advanced/03-super-resolution-onnx/main.py) - ...
 
 
-
+<br>
+<br>
 
 _Updating..._
 
