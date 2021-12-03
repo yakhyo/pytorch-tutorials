@@ -14,8 +14,8 @@
 
 ### Beginner
 
-- []()
-- []()
+- [Autograd and Freeze weights](tutorials/02-beginner/01-autograd/main.py) - Autograd: Automatic Differentiation. 
+- [Neural Networks](tutorials/02-beginner/)
 - []()
 
 ### Intermediate
