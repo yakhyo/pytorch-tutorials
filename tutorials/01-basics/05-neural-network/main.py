@@ -78,7 +78,7 @@ print(flat_image.size())
 '''
 
 # nn.Linear
-layer1 = nn.Linear(in_features=28*28, out_features=20)
+layer1 = nn.Linear(in_features=28 * 28, out_features=20)
 hidden1 = layer1(flat_image)
 print(hidden1.size())
 '''Result:
@@ -124,7 +124,7 @@ seq_modules = nn.Sequential(
     nn.ReLU(),
     nn.Linear(20, 10)
 )
-input_image = torch.rand(3,28,28)
+input_image = torch.rand(3, 28, 28)
 logits = seq_modules(input_image)
 
 # nn.Softmax

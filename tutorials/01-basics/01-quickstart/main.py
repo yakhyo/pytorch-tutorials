@@ -46,9 +46,9 @@ test_dataloader = DataLoader(
     batch_size=batch_size,
     shuffle=False)
 
-for X, y in test_dataloader:
-    print('Shape of X [N, C, H, W]:', X.size())
-    print('Shape of y:', y.size())
+for images, labels in test_dataloader:
+    print('Shape of X [N, C, H, W]:', images.size())
+    print('Shape of y:', labels.size())
     break
 
 """Result:
@@ -148,7 +148,7 @@ torch.save(model.state_dict(), "model.pt")
 print("Saved PyTorch Model State to model.pt")
 
 # ================================================================ #
-#                           Loading Models                         #
+#                      Loading Models and Using                    #
 # ================================================================ #
 
 model = NeuralNetwork()
@@ -167,13 +167,9 @@ classes = [
     "Ankle boot",
 ]
 
-# ================================================================ #
-#                       Using Pre-Trained Models                   #
-# ================================================================ #
-
 model.eval()
-x, y = test_data[0][0], test_data[0][1]
+image, label = test_data[0][0], test_data[0][1]
 with torch.no_grad():
-    predictions = model(x)
-    predicted, actual = classes[predictions[0].argmax(0)], classes[y]
+    predictions = model(image)
+    predicted, actual = classes[predictions[0].argmax(0)], classes[label]
     print(f'Predicted: "{predicted}", Actual: "{actual}"')

@@ -2,8 +2,6 @@
 #                           Optimization                           #
 # ================================================================ #
 
-# Prerequisite Code
-
 import torch
 from torch import nn
 from torch.utils.data import DataLoader
@@ -27,8 +25,8 @@ test_data = datasets.FashionMNIST(
     transform=ToTensor()
 )
 
-train_dataloader = DataLoader(training_data, batch_size=64)
-test_dataloader = DataLoader(test_data, batch_size=64)
+train_loader = DataLoader(training_data, batch_size=64)
+test_loader = DataLoader(test_data, batch_size=64)
 
 
 class NeuralNetwork(nn.Module):
@@ -77,10 +75,10 @@ optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
 
 def train_loop(dataloader, model, loss_fn, optimizer):
     size = len(dataloader.dataset)
-    for batch, (X, y) in enumerate(dataloader):
+    for batch, (images, labels) in enumerate(dataloader):
         # Compute prediction and loss
-        pred = model(X)
-        loss = loss_fn(pred, y)
+        pred = model(images)
+        loss = loss_fn(pred, labels)
 
         # Backpropagation
         optimizer.zero_grad()
@@ -88,7 +86,7 @@ def train_loop(dataloader, model, loss_fn, optimizer):
         optimizer.step()
 
         if batch % 100 == 0:
-            loss, current = loss.item(), batch * len(X)
+            loss, current = loss.item(), batch * len(images)
             print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
 
 
@@ -97,10 +95,10 @@ def test_loop(dataloader, model, loss_fn):
     test_loss, correct = 0, 0
 
     with torch.no_grad():
-        for X, y in dataloader:
-            pred = model(X)
-            test_loss += loss_fn(pred, y).item()
-            correct += (pred.argmax(1) == y).type(torch.float).sum().item()
+        for images, labels in dataloader:
+            pred = model(images)
+            test_loss += loss_fn(pred, labels).item()
+            correct += (pred.argmax(1) == labels).type(torch.float).sum().item()
 
     test_loss /= size
     correct /= size
@@ -113,8 +111,8 @@ def test_loop(dataloader, model, loss_fn):
 
 for t in range(epochs):
     print(f"Epoch {t + 1}\n-------------------------------")
-    train_loop(train_dataloader, model, loss_fn, optimizer)
-    test_loop(test_dataloader, model, loss_fn)
+    train_loop(train_loader, model, loss_fn, optimizer)
+    test_loop(test_loader, model, loss_fn)
 print("Done!")
 
 # ================================================================ #

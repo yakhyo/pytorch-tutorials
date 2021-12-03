@@ -66,9 +66,11 @@ class CustomDataset(Dataset):
         self.transform = transform
         self.target_transform = target_transform
 
+    # The __len__ function returns the number of samples in our dataset.
     def __len__(self):
         return len(self.img_labels)
 
+    # The __getitem__ function loads and returns a sample from the dataset at the given index idx
     def __getitem__(self, idx):
         img_path = os.path.join(self.img_dir, self.img_labels.iloc[idx, 0])
         image = read_image(img_path)
