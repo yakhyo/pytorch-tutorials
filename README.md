@@ -28,8 +28,8 @@
 ### Advanced
 
 - [Adversarial Generative Network](https://github.com/yakhyo/DCGAN-pt) - Deep Convolutional **Generative Adversarial Network**.
-- [Fast Neural Style Transfer](https://github.com/yakhyo/Fast-Neural-Style-Transfer) - ...
-- [Super Resolution. Running it Using ONNX Runtime](tutorials/04-advanced/03-super-resolution-onnx/main.py) - ...
+- [Fast Neural Style Transfer](https://github.com/yakhyo/Fast-Neural-Style-Transfer) - Transferring image with different styles.
+- [Super Resolution. Running it Using ONNX Runtime](tutorials/04-advanced/03-super-resolution-onnx/main.py) - **Inferencing** using **ONNX** Runtime.
 
 
 <br>
