@@ -4,13 +4,13 @@
 
 ### Basics
 
-- [QuickStart](tutorials/01-basics/01-quickstart/main.py) - **QuickStart** will give general overview of **Basics** section.
-- [Tensors](tutorials/01-basics/02-tensors/main.py) - **Operations** on tensors, numpy arrays and casting them to tensor or vice versa.
-- [Datasets and DataLoaders](tutorials/01-basics/03-dataset-dataloaders/main.py) - Creating **datasets** and **dataloaders**.
-- [Transforms](tutorials/01-basics/04-transforms/main.py) - Torchvision's **augmentation** methods and using them together.
-- [Build Neural Network](tutorials/01-basics/05-neural-network/main.py) - Building simple neural network from scratch.
-- [Optimizers, Model Save and Load](tutorials/01-basics/06-optim-save-load/main.py) - Creating **optimizers**, **saving** trained models and **loading** for inference.
-- [Data Parallel](tutorials/01-basics/07-data-parallel/main.py) - Feeding data to the **GPU** by splitting into **multiple** parts. 
+- **QuickStart** [[File](tutorials/01-basics/01-quickstart/main.py) | [Notebook](tutorials/01-basics/01-quickstart/main.ipynb)] - **QuickStart** gives general overview of **Basics** section.
+- **Tensors** [[File](tutorials/01-basics/02-tensors/main.py) | [Notebook](tutorials/01-basics/02-tensors/main.ipynb)] - **Operations** on tensors, numpy arrays and casting them to tensor or vice versa.
+- **Datasets and DataLoaders** [[File](tutorials/01-basics/03-dataset-dataloaders/main.py) | [Notebook](tutorials/01-basics/03-dataset-dataloaders/main.ipynb)] - Creating **datasets** and **dataloaders**.
+- **Transforms** [[File](tutorials/01-basics/04-transforms/main.py) | [Notebook](tutorials/01-basics/04-transforms/main.ipynb)] - Torchvision's **augmentation** methods and using them together.
+- **Build Neural Network** [[File](tutorials/01-basics/05-neural-network/main.py) | [Notebook](tutorials/01-basics/05-neural-network/main.ipynb)] - Building simple neural network from scratch.
+- **Optimizers, Model Save and Load** [[File](tutorials/01-basics/06-optim-save-load/main.py) | [Notebook](tutorials/01-basics/06-optim-save-load/main.ipynb)] - Creating **optimizer**, **saving** trained model and **loading** for inference.
+
 
 ### Beginner
 
